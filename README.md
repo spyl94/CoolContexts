@@ -5,6 +5,12 @@ Here they are : **CoolContexts** !
 They are highly coupled to my projects, but you can find some inspiration there.
 Be nice with them and create cool things ;-)
 
+## Installation
+
+```
+composer require 'spyl/cool-contexts:dev-master'
+```
+
 ## Content
 
 + DefaultContext : avoid redundancy
