@@ -14,9 +14,10 @@ composer require spyl/cool-contexts
 
 ## Contexts
 
-+ DefaultContext : avoid redundancy
-+ WebApiContext : to test your (REST) APIs
-+ CommandContext : to test commands ;)
++ DefaultContext : some helpers methods in addition to KernelAwareContext
++ DoctrineFixturesContext : load your fixtures before suite and after each @database tags
++ [WebApiContext](https://github.com/spyl94/CoolContexts/blob/master/src/Spyl/CoolContexts/WebApiContext.php) : useful steps to test your (REST) APIs
++ [CommandContext](https://github.com/spyl94/CoolContexts/blob/master/src/Spyl/CoolContexts/CommandContext.php) : useful steps to test your commands ;)
 
 ## Configuration
 

@@ -63,20 +63,4 @@ abstract class DefaultContext implements KernelAwareContext
 
         return $token->getUser();
     }
-
-    /**
-     * @BeforeSuite
-     */
-    public static function reinitDatabase()
-    {
-        DefaultContext::databaseContainsFixtures();
-    }
-
-    /**
-     * @AfterScenario @database
-     */
-    public static function databaseContainsFixtures()
-    {
-        exec('php app/console doctrine:fixtures:load -n -e test');
-    }
 }
