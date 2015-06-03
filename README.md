@@ -5,41 +5,40 @@ Here they are : **CoolContexts** !
 They are highly coupled to my projects, but you can find some inspiration there.
 Be nice with them and create cool things ;-)
 
-## Installation
+## Quick start
 
+Install CoolContexts with composer:
 ```
-composer require 'spyl/cool-contexts:dev-master'
+composer require spyl/cool-contexts
 ```
 
-## Content
+## Contexts
 
 + DefaultContext : avoid redundancy
-+ WebApiContext : to test your APIs
++ WebApiContext : to test your (REST) APIs
 + CommandContext : to test commands ;)
 
-## Usage example
+## Configuration
 
-```
+Edit behat.yml
+```yaml
 default:
-    formatters:
-        pretty:
-            verbose:  true
-            paths:    false
-            snippets: false
-    extensions:
-           Behat\Symfony2Extension: ~
+    # ...
     suites:
         api:
-            paths: [ %paths.base%/features/api ]
+            # ...
             contexts:
                 - Spyl\CoolContexts\WebApiContext
+                - # ...
         commands:
-            paths: [ %paths.base%/features/commands ]
+            # ...
             contexts:
                 - Spyl\CoolContexts\CommandContext
 ```
 
-```
+## Examples
+
+```gherkin
 # features/api/login.features
 
 Feature: Login Restful Api
@@ -66,7 +65,7 @@ Scenario: Anonymous API client wants to login
 """
 ```
 
-```
+```gherkin
 # features/commands/instances.feature
 
 @database
@@ -76,6 +75,8 @@ Scenario: Anonymous user wants to create an instance coucou.fr
     And I should see "Instance coucou has been created !"
 ```
 
+## Information
+
 If you need to add custom steps, you can easily extends them, feel free to send me a PR if you think your changes could be useful to everyone !
 
-Build with love by @spyl94.
+Build with love by **@spyl94**.
