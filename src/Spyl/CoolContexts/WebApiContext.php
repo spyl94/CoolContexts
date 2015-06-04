@@ -99,7 +99,7 @@ class WebApiContext extends DefaultContext
      * @param string    $url    relative url
      * @param TableNode $values table of values
      *
-     * @When /^(?:I )?send a ([A-Z]+) request to "([^"]+)" with json:$/
+     * @When /^(?:I )?send a ([A-Z]+) request to "([^"]+)" with body:$/
      */
     public function iSendARequestWithJson($method, $url, PyStringNode $string)
     {
