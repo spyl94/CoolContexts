@@ -4,14 +4,14 @@ namespace Spyl\CoolContexts;
 
 use Behat\Behat\Context\Context;
 
-class DoctrineFixturesContext extends Context
+class DoctrineFixturesContext implements Context
 {
     /**
      * @BeforeSuite
      */
     public static function reinitDatabase()
     {
-        DefaultContext::databaseContainsFixtures();
+        DoctrineFixturesContext::databaseContainsFixtures();
     }
 
     /**
